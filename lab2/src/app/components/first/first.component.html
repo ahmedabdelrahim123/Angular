@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        First Component
+    </div>
+    <div class="card-body">
+        <div class="row d-flex justify-content-center">
+            <div class="col-auto">
+                <label class="col-form-label">Enter any words</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" value="{{your_words}}" placeholder="First Name" (input)="getValue($event)" />
+
+            </div>
+            <div class="col-auto">
+                <input type="button" value="Reset" class="btn btn-outline-info" (click)="reset()">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <p>Data: {{your_words}}</p>
+        </div>
+    </div>
