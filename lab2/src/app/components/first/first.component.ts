@@ -8,7 +8,6 @@ import {Component } from '@angular/core';
 export class FirstComponent{
   your_words = "";
   getValue(e:any){
-    //console.log(e.target.value);
     this.your_words = e.target.value;
   }
   reset(){

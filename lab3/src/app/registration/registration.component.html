@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header">
+      First Component
+  </div>
+  <div class="card-body">
+      <div class="row d-flex justify-content-center" style="width:50% ">
+          <div class="row" >
+              <input type="text" class="form-control" placeholder="Name" [(ngModel)]="usrName" >
+              <div style="text-align: center; color: red;" *ngIf="usrName.length<=3 && usrName ">
+                <p>Name length must be more than 3</p>
+              </div>
+
+          </div><br>
+          <div class="row">
+            <input type="text" class="form-control" placeholder="Age"  [(ngModel)]="usrAge">
+            <div style="text-align: center; color: red;" *ngIf="+usrAge>40 || +usrAge<20 && usrAge ">
+              <p>Age Not Valid</p>
+            </div>
+        </div>
+<!--
+        <div class="row"  [ngStyle]="+usrAge<40 || +usrAge>20"? <p>Age Valid</p>: <p>Age not Valid</p>
+          >
+      </div> -->
+          <div class="row">
+              <input type="button" value="Add" class="btn btn-outline-info" (click)="Add()" >
+          </div>
+      </div>
+  </div>
+</div>
